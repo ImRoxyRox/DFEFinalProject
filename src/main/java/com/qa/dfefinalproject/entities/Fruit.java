@@ -1,16 +1,26 @@
 package com.qa.dfefinalproject.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
 public class Fruit {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
+	
+	@Column(nullable = false)
 	private String kiwi;
+	
+	@Column(nullable = false)
 	private String mango;
+	
+	@Column(nullable = false)
 	private String pineapple;
-	
-	
 	
 	
 	public long getId() {
