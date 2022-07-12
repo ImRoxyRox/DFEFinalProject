@@ -1,10 +1,10 @@
-package com.qa.dfeproject;
+package com.qa.dfefinalproject;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DfeProjectApplicationTests {
+class DfeFinalProjectApplicationTests {
 
 	@Test
 	void contextLoads() {
