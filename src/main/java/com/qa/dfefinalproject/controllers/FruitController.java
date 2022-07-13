@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -35,4 +36,12 @@ public class FruitController {
 	public Fruit readById(@PathVariable int id) {
 		return this.fruits.get(id);
 	}
+
+	@PutMapping("/update/{id}")
+	public Fruit update(@PathVariable int id, @RequestBody Fruit fruit) {
+		this.fruits.remove(id);
+		this.fruits.add(id, fruit);
+		return this.fruits.get(id);
+	}
+
 }
