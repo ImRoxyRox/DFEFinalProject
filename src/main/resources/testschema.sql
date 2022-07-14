@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS `fruit`;
+
+CREATE TABLE `fruit` (
+	`id` BIGINT AUTO_INCREMENT,
+	`kiwi` VARCHAR(255) NOT NULL,
+	`mango` VARCHAR(255) NOT NULL,
+	`pineapple` VARCHAR(255) NOT NULL,
+	PRIMARY KEY (`id`)
+	);

@@ -7,5 +7,5 @@ import com.qa.dfefinalproject.entities.Fruit;
 
 @Repository
 public interface FruitRepo extends JpaRepository<Fruit, Long> {
-
+	
 }
