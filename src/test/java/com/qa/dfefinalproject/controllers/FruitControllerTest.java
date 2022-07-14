@@ -1,6 +1,7 @@
 package com.qa.dfefinalproject.controllers;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 
 import java.util.ArrayList;
@@ -31,18 +32,57 @@ public class FruitControllerTest {
 
 	@Autowired
 	private ObjectMapper mapper;
+	
+	@Test
+	public void createTest() throws Exception {
+		Fruit entry = new Fruit("Hardy", "Francis", "Queen");
+		String entryAsJSON = mapper.writeValueAsString(entry);
+		
+		Fruit result = new Fruit("Hardy", "Francis", "Queen");
+		String resultAsJSON = mapper.writeValueAsString(result);
+		
+		mvc.perform(post("/fruit/create")
+				.contentType(MediaType.APPLICATION_JSON)
+				.content(entryAsJSON))
+		.andExpect(content().json(resultAsJSON));
+	}
 
 	@Test
 	public void readAllTest() throws Exception {
 
 		List<Fruit> output = new ArrayList<>();
-		Fruit entry = new Fruit(1L, "Kiwi", "Mango", "Pineapple");
+		Fruit entry = new Fruit(1L, "Actinidia", "Ataulfo", "Abacaxi");
 		output.add(entry);
 
 		String outputAsJSON = mapper.writeValueAsString(output);
 
-		mvc.perform(get("/fruit/readAll").contentType(MediaType.APPLICATION_JSON))
+		mvc.perform(get("/fruit/readAll")
+				.contentType(MediaType.APPLICATION_JSON))
 				.andExpect(content().json(outputAsJSON));
 	}
+	
+	@Test
+	public void readByIdTest() throws Exception {
+		Fruit entry = new Fruit(1L, "Actinidia", "Ataulfo", "Abacaxi");
+		String entryAsJSON = this.mapper.writeValueAsString(entry);
+		
+		mvc.perform(get("/fruit/readById/1")
+				.contentType(MediaType.APPLICATION_JSON))
+				.andExpect(content().json(entryAsJSON));
+	}
 
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
