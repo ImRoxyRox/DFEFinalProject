@@ -1,0 +1,1 @@
+INSERT INTO `fruit`(`kiwi`, `mango`, `pineapple`) VALUES ('Actinidia', 'Ataulfo', 'Abacaxi');

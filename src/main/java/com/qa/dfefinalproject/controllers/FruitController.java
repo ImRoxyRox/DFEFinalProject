@@ -44,7 +44,7 @@ public class FruitController {
 		return this.service.update(id, fruit);
 	}
 
-	@DeleteMapping("/delete{id}")
+	@DeleteMapping("/delete/{id}")
 	public boolean delete(@PathVariable long id) {
 		return this.service.delete(id);
 	}
