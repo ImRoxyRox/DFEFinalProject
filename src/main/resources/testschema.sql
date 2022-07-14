@@ -6,4 +6,4 @@ CREATE TABLE `fruit` (
 	`mango` VARCHAR(255) NOT NULL,
 	`pineapple` VARCHAR(255) NOT NULL,
 	PRIMARY KEY (`id`)
-	)
+	);
