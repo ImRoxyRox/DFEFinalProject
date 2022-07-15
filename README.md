@@ -31,4 +31,4 @@ o Screenshot of your test results, including coverage report.
 
 All of my screenshots are in the document folder named as: FinalProjectDocuments
 
-o Link to Jira Board: https://rossellaortu.atlassian.net/jira/software/projects/DFEP/boards/1
+o Link to Jira Board: https://rossellaortu.atlassian.net/jira/software/projects/DFEP/boards/1/backlog?sprintCompleted
