@@ -24,8 +24,11 @@ I would also make better use of the Jira board, which has been a really helpful 
 I'm sure that what I'll do from here on out is practise and practise so that I can thoroughly comprehend each phase of the procedure.
 
 o Screenshots showing your postman requests and the output from the API.
+
 o Screenshots of your database to prove that data is being persisted.
+
 o Screenshot of your test results, including coverage report.
+
 All of my screenshots are in the document folder named as: FinalProjectDocuments
 
 o Link to Jira Board: https://rossellaortu.atlassian.net/jira/software/projects/DFEP/boards/1
